@@ -20,7 +20,6 @@
         (expand-file-name "~/.emacs.d/elisp/auto-complete/")
         (expand-file-name "~/.emacs.d/elisp/auto-complete-latex/")
         (expand-file-name "~/.emacs.d/elisp/anything/")
-        (expand-file-name "~/.emacs.d/skk/")
          )
        load-path))
 
