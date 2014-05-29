@@ -18,7 +18,7 @@
         (define-key (current-local-map) "\C-h" 'python-backspace)))
 
 ;; YaTeX
-(add-hook ' yatex-mode-hook 
+(add-hook ' yatex-mode-hook
 	'(lambda ()
        (auto-fill-mode -1)))
 
@@ -31,3 +31,10 @@
 (add-hook 'emacs-lisp-mode-hook
           '(lambda ()
              (add-to-list 'ac-sources 'ac-source-symbols t)))
+
+;; Markdown
+(add-hook 'markdown-mode-hook
+          '(lambda ()
+             (set (make-local-variable 'whitespace-action) nil)))
+	hoge
+	hoge
