@@ -36,5 +36,3 @@
 (add-hook 'markdown-mode-hook
           '(lambda ()
              (set (make-local-variable 'whitespace-action) nil)))
-	hoge
-	hoge
