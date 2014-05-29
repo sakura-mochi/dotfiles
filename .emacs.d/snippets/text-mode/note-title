@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: lecture_note-title
+# key: lecture_title
+# type: comment
+# --
+;; Title   : $1
+;; Subject : $2
+;; Person  : $3
+;; Date    : $4
+;; Time    : $5
+;; Place   : $6
+;; Note    : $7
+$0
