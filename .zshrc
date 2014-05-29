@@ -142,7 +142,7 @@ case ${OSTYPE} in
     darwin*)
         alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
         alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n'
-		alias e='emacsclient'
+        alias e='emacsclient'
         ;;
     linux*)
         alias e='emacsclient'
