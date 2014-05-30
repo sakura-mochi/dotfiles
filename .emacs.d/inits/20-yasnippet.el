@@ -43,3 +43,7 @@
            (signal 'quit "user quit!"))))
      (custom-set-variables '(yas/prompt-functions '(my-yas/prompt)))
      (define-key anything-command-map (kbd "y") 'yas/insert-snippet)))
+
+(setf (symbol-function 'yas-active-keys)
+      (lambda ()
+        (remove-duplicates (mapcan #'yas--table-all-keys (yas--get-snippet-tables)))))

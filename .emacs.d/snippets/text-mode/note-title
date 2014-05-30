@@ -2,6 +2,7 @@
 # name: lecture_note-title
 # key: lecture_title
 # type: comment
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
 # --
 ;; Title   : $1
 ;; Subject : $2
