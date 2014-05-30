@@ -3,5 +3,4 @@
 
 # ignore directories
 .emacs.d/cache/
-.emacs.d/elpa/
 .emacs.d/recentf
