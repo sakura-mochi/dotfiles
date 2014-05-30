@@ -45,12 +45,10 @@
 
 ;; Tab configuration
 (setq-default tab-width 4)
-(setq default-tab-width 4)
-(setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120))
+(setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80))
 
 ; disable Tab
 (setq-default indent-tabs-mode nil)
-(setq indent-tabs-mode nil)
 
 ; disable backup file
 (setq make-backup-files nil)
@@ -61,7 +59,7 @@
 ;; scrool 1 line
 (setq scroll-step 1)
 
-;; set mini-buffer history length to infinity 
+;; set mini-buffer history length to infinity
 (setq history-length t)
 
 ;; set undo no redo
@@ -70,8 +68,3 @@
 ;; set undo limit
 (setq undo-limit 10000)
 (setq undo-strong-limit 50000)
-
-;; add package repository
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
