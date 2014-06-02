@@ -27,7 +27,7 @@ bind o focus
 defscrollback 10000
 
 # caption and hardstatus configuration
-caption always "%{b RK} %y/%m/%d(%D)%c:%s %{bu dr} | %-w%{=bu CK}%n %t%{-}%+w"
+# caption always "%{b RK} %y/%m/%d(%D)%c:%s %{bu dr} | %-w%{=bu CK}%n %t%{-}%+w"
 hardstatus alwayslastline "%{= wk}(%H): %-w%{=bu dr}%n %t%{-}%+w %= (%l) %{=b wb}%y/%m/%d %{=b wb}%c:%s"
 
 # disable start message
