@@ -21,9 +21,11 @@ case ${OSTYPE} in
         export EDITOR=emacsclient
         ;;
     linux*)
-        export PATH=$HOME/bin:/usr/local/bin:$PATH:/sbin:/usr/sbin:/usr/local/sbin
+        export PATH=$HOME/bin:/usr/local/bin:$PATH:/sbin:/usr/sbin:/usr/local/sbin:/usr/lib/jvm/java-8-oracle/bin
         eval $(dircolors -b ~/.dir_colors)
         export EDITOR=emacsclient
+        export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+        export CLASSPATH=.:/usr/lib/jvm/java-8-oracle/lib
         ;;
 esac
 
@@ -96,10 +98,22 @@ alias mkdir='mkdir -p'
 alias hd='cd ~/'
 case ${OSTYPE} in
     darwin*)
-        alias screen='/usr/local/Cellar/screen/HEAD/bin/screen'
         ;;
     linux*)
         alias open='xdg-open'
+        ;;
+esac
+
+
+##
+## binary alias configuration
+##
+case ${OSTYPE} in
+    darwin*)
+        alias screen='/usr/local/Cellar/screen/HEAD/bin/screen'
+        ;;
+    linux*)
+        alias eclipse='/usr/local/eclipse/eclipse'
         ;;
 esac
 
