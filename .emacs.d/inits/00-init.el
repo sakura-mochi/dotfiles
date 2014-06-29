@@ -25,7 +25,7 @@
 (cd "~")
 
 ;; set language (Japanese)
-(set-language-environment 'Japanese)
+;; (set-language-environment 'Japanese)
 
 ;; disable completion case (serach)
 (setq completion-ignore-case t)
