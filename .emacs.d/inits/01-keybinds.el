@@ -22,8 +22,8 @@
 
 ;; C-i : insert Tab
 (global-set-key "\C-i" '(lambda ()
-  (interactive)
-  (insert "\t")))
+                          (interactive)
+                          (insert "\t")))
 
 ;; C-c C-t : wait shell command
 (global-set-key (kbd "C-c C-t") 'shell-command)
@@ -42,3 +42,6 @@
 
 ;; C-z : disable minimize
 (global-unset-key "\C-z")
+
+;; M-i : indent region
+(global-set-key "\M-i" 'indent-region)
