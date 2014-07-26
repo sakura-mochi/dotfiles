@@ -101,6 +101,7 @@ case ${OSTYPE} in
         ;;
     linux*)
         alias open='xdg-open'
+		alias pkill='ps aux | percol | awk '{ print $1 }' | xargs kill'
         ;;
 esac
 
@@ -166,3 +167,21 @@ esac
 perl -wle \
     'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' \
     PATH > ~/.emacs.d/cache/shellenv.el
+
+
+###
+### percol functions
+###
+function percol_select_history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
+    CURSOR=$#BUFFER             # move cursor
+    zle -R -c                   # refresh
+}
+zle -N percol_select_history
+bindkey '^r' percol_select_history
