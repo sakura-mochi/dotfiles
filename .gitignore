@@ -1,5 +1,5 @@
 # ignore files
-
+.emacs.d/inits/99-test.el
 
 # ignore directories
 .emacs.d/cache/
