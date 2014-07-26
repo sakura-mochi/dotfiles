@@ -172,6 +172,7 @@ perl -wle \
 ###
 ### percol functions
 ###
+# call command history
 function percol_select_history() {
     local tac
     if which tac > /dev/null; then
@@ -185,3 +186,42 @@ function percol_select_history() {
 }
 zle -N percol_select_history
 bindkey '^r' percol_select_history
+
+
+# log cd history
+typeset -U chpwd_functions
+CD_HISTORY_FILE=${HOME}/.recentcd
+
+function chpwd_record_history() {
+    echo $PWD >> ${CD_HISTORY_FILE}
+}
+chpwd_functions=($chpwd_functions chpwd_record_history)
+
+function percol_get_destination_from_history() {
+    sort ${CD_HISTORY_FILE} | uniq -c | sort -r | \
+        sed -e 's/^[ ]*[0-9]*[ ]*//' | \
+        sed -e s"/^${HOME//\//\\/}/~/" | \
+        percol | xargs echo
+}
+
+function percol_cd_history() {
+    local destination=$(percol_get_destination_from_history)
+    [ -n $destination ] && cd ${destination/#\~/${HOME}}
+    zle reset-prompt
+}
+zle -N percol_cd_history
+
+function percol_insert_history() {
+    local destination=$(percol_get_destination_from_history)
+    if [ $? -eq 0 ]; then
+        local new_left="${LBUFFER} ${destination} "
+        BUFFER=${new_left}${RBUFFER}
+        CURSOR=${#new_left}
+    fi
+    zle reset-prompt
+}
+zle -N percol_insert_history
+
+
+bindkey '^x;' percol_cd_history
+bindkey '^xi' percol_insert_history
