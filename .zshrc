@@ -1,10 +1,10 @@
 ###
 ###  .zshrc
 ###  z shell configration file
-###  Version 1.5
+###  Version 2.0
 ###
 ###  Created by Teppei Kobayashi
-###  Last Modified 2014/04/14
+###  Last Modified 2014/07/27
 ###
 
 
@@ -101,7 +101,6 @@ case ${OSTYPE} in
         ;;
     linux*)
         alias open='xdg-open'
-		alias pkill='ps aux | percol | awk '{ print $1 }' | xargs kill'
         ;;
 esac
 
@@ -181,11 +180,20 @@ function percol_select_history() {
         tac="tail -r"
     fi
     BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
-    CURSOR=$#BUFFER             # move cursor
-    zle -R -c                   # refresh
+    CURSOR=$#BUFFER
+    zle -R -c
 }
 zle -N percol_select_history
 bindkey '^r' percol_select_history
+
+
+# kill process
+function percol_kill_process() {
+	ps ax -o pid,lstart,command | percol --query "$LBUFFER" | awk '{ print $1 }' | xargs kill
+    zle clear-screen
+}
+zle -N percol_kill_process
+bindkey '^9' percol_kill_process
 
 
 # log cd history
@@ -221,7 +229,6 @@ function percol_insert_history() {
     zle reset-prompt
 }
 zle -N percol_insert_history
-
 
 bindkey '^x;' percol_cd_history
 bindkey '^xi' percol_insert_history
