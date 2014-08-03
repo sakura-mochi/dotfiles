@@ -179,7 +179,7 @@ function percol_select_history() {
     else
         tac="tail -r"
     fi
-    BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
+    BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER" --match-method cmigemo)
     CURSOR=$#BUFFER
     zle -R -c
 }
@@ -189,11 +189,11 @@ bindkey '^r' percol_select_history
 
 # kill process
 function percol_kill_process() {
-	ps ax -o pid,lstart,command | percol --query "$LBUFFER" | awk '{ print $1 }' | xargs kill
+    ps ax -o pid,lstart,command | percol --query "$LBUFFER" --match-method cmigemo | awk '{ print $1 }' | xargs kill
     zle clear-screen
 }
 zle -N percol_kill_process
-bindkey '^9' percol_kill_process
+bindkey '^xk' percol_kill_process
 
 
 # log cd history
