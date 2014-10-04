@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: header-title
+# key: ht
+# type: title
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+//
+// $1.h
+// Header file
+// Version $2
+//
+// Created by Teppei Kobayashi (Dept. of Optical Science and Technology)
+// Last Modified $3
+//
+
+
+$0
