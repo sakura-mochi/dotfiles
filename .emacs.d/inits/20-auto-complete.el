@@ -26,8 +26,8 @@
 
 ;; appoint file
 ;; ac-source-filename                   : from filename
-;; ac-source-words-in-same-mode-buffers : from same major mode
-(setq-default ac-sources '(ac-source-filename ac-source-words-in-same-mode-buffers))
+;; ac-source-words-in-all-buffers       : from all buffer
+(setq-default ac-sources '(ac-source-filename ac-source-words-in-all-buffer))
 ;; start trigger : auto
 (setq ac-auto-start 3)
 ;; start trigger : Tab
