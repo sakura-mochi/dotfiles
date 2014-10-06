@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: source-title
+# key: st
+# type: title
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+//
+// $1.cpp
+// $2 source file
+// Version $3
+//
+// Created by Teppei Kobayashi (Dept. of Optical Science and Technology)
+// Last Modified $4
+//
+
+
+$0
