@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: doxygen-comment
+# key: dc
+# type: comment
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+/**
+* @brief  $1
+* @param  $2
+* @return $3
+*/
+$0
