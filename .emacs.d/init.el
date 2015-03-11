@@ -12,7 +12,7 @@
 (setq load-path
       (append
        (list
-        (expand-file-name "~/.emacs.d/")
+        ;;(expand-file-name "~/.emacs.d/")
         (expand-file-name "~/.emacs.d/elisp/")
         (expand-file-name "~/.emacs.d/elisp/mode/")
         (expand-file-name "~/.emacs.d/elisp/mode/arduino-mode")
