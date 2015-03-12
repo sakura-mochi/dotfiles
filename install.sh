@@ -73,6 +73,8 @@ sudo apt-get -yV install zsh gcc lv git nkf markdown screen
 sudo apt-get -yV install fcitx-mozc chromium-browser cmigemo
 sudo apt-get -yV install fonts-takao-pgothic fonts-takao-gothic fonts-taka-mincho
 sudo apt-get -yV install doxygen doxygen-gui graphviz qpdfview
+sudo apt-get -yV install gimp dia gnome-screenshot
+sudo apt-get -yV install emacs24 emacs24-el emacs-mozc emacs-mozc-bin
 
 ## Package compornents
 sudo apt-get -yV install software-properties-common
@@ -86,8 +88,6 @@ sudo apt-get -y update
 ## System compornents (from unofficial repository)
 sudo apt-get -yV install cinnamon
 sudo apt-get -yV install texlive-lang-cjk
-sudo apt-get -yV install gimp dia
-sudo apt-get -yV install emacs24 emacs24-el emacs-mozc emacs-mozc-bin
 
 
 #
