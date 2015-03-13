@@ -46,6 +46,14 @@
 # ---
 # When you are done, reboot and see if issue is resolved.
 
+# If you want to disable guest user in lightdm, try this.
+# > sudo nano /etc/lightdm/lightdm.conf
+# ---
+# [SeatDefaults]
+# allow-guest=false
+# ---
+# > sudo restart lightdm
+
 
 
 # Configuration

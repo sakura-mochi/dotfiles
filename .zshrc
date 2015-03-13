@@ -33,9 +33,9 @@ esac
 ## Prompt settings
 ##
 setopt prompt_subst
-PROMPT=$'%F{magenta}%n@%m%f%}> '
+PROMPT=$'%F{yellow}%n@%m%f%}> '
 SPROMPT=$'%UDid you mean%u : %F{red}%R%f -> %F{green}%r%f [n,y,a,e]'
-RPROMPT=$'[%F{magenta}%39<...<% %~%f]'
+RPROMPT=$'[%F{yellow}%39<...<% %~%f]'
 
 
 ##
