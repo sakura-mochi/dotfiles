@@ -143,7 +143,7 @@ git init
 git remote add dotfiles http://github.com/toronty/dotfiles.git
 cd ~
 ln -s dotfiles/.emacs.d/ .emacs.d
-ln -s dotfiles/.zshrc .zshrc
+ln -s dotfiles/.zsh/.zshenv .zshenv
 ln -s dotfiles/.screenrc .screenrc
 ln -s dotfiles/.dir_colors .dir_colors
 ln -s dotfiles/.percol.d/ .percol.d

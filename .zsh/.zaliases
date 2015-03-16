@@ -1,0 +1,73 @@
+###
+###  .zaliases
+###  z shell configration file
+###  Version 1.0
+###
+###  Created by Teppei Kobayashi
+###  Last Modified 2015/03/16
+###
+
+
+##
+## alias configuration
+##
+alias cd='pushd'
+alias pd='popd'
+alias mkdir='mkdir -p'
+alias hd='cd ~/'
+case ${OSTYPE} in
+    darwin*)
+        ;;
+    linux*)
+        alias open='xdg-open'
+        ;;
+esac
+
+
+##
+## binary alias configuration
+##
+case ${OSTYPE} in
+    darwin*)
+        alias screen='/usr/local/Cellar/screen/HEAD/bin/screen'
+        ;;
+    linux*)
+        alias eclipse='/usr/local/eclipse/eclipse'
+        ;;
+esac
+
+
+##
+## <ls> configuration
+##
+case ${OSTYPE} in
+    darwin*)
+        alias ls='ls -G'
+        alias ll="ls -Gl"
+        alias la="ls -GA"
+        alias lla="ls -GlA"
+        alias lal="lla"
+        ;;
+    linux*)
+        alias ls='ls -G --color=auto'
+        alias ll="ls -Gl"
+        alias la="ls -GA"
+        alias lla="ls -GlA"
+        alias lal="lla"
+        ;;
+esac
+
+
+##
+## <Emacs> configuration
+##
+case ${OSTYPE} in
+    darwin*)
+        alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+        alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n'
+        alias e='emacsclient'
+        ;;
+    linux*)
+        alias e='emacsclient'
+        ;;
+esac
