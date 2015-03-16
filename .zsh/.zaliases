@@ -69,5 +69,8 @@ case ${OSTYPE} in
         ;;
     linux*)
         alias e='emacsclient'
+        alias vivado='sudo /opt/Xilinx/Vivado/2014.1/bin/vivado'
+        alias arduino='sudo /opt/Arduino/arduino'
+        alias processing='sudo /opt/Processing/processing'
         ;;
 esac
