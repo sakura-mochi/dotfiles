@@ -4,7 +4,7 @@
 # Version 2.1
 #
 # Created by Teppei Kobayashi
-# Last Modified 2015/03/12
+# Last Modified 2015/03/16
 #
 
 
@@ -80,8 +80,8 @@ sudo apt-get -yV install lightdm lightdm-gtk-greeter --no-install-recommends
 sudo apt-get -yV install zsh gcc lv git nkf markdown screen
 sudo apt-get -yV install fcitx-mozc chromium-browser cmigemo
 sudo apt-get -yV install fonts-takao-pgothic fonts-takao-gothic fonts-taka-mincho
-sudo apt-get -yV install doxygen doxygen-gui graphviz qpdfview
-sudo apt-get -yV install gimp dia gnome-screenshot
+sudo apt-get -yV install doxygen doxygen-gui graphviz evince
+sudo apt-get -yV install gimp inkscape dia gnome-screenshot
 sudo apt-get -yV install emacs24 emacs24-el emacs-mozc emacs-mozc-bin
 
 ## Package compornents
