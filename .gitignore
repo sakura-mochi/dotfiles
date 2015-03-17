@@ -1,5 +1,6 @@
 # ignore files
 .emacs.d/inits/99-test.el
+.zsh/.zcompdump
 
 # ignore directories
 .emacs.d/cache/
