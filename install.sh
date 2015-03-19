@@ -1,10 +1,10 @@
 #
 # install.sh
 # shell script
-# Version 2.2
+# Version 2.3
 #
 # Created by Teppei Kobayashi
-# Last Modified 2015/03/17
+# Last Modified 2015/03/20
 #
 
 
@@ -56,8 +56,12 @@
 
 
 
+#
+# Intruduction
+#
+
 # Configuration
-GIT_USER="Teppei Kobayashi (Chamomile)"
+GIT_USER="Teppei Kobayashi"
 GIT_MAIL="teppei.k.el@gmail.com"
 
 # Setup
@@ -73,11 +77,15 @@ cd /tmp
 # Install compornents
 #
 
+## Script log configuration
+exec 1> >(tee -a install.log)
+exec 2> >(tee -a install-errors.log >&2)
+
 ## System compornents (from official repository)
 sudo apt-get -y update
 sudo apt-get -yV install xserver-xorg-core xinit alsa-base gdebi-core synaptic logrotate
 sudo apt-get -yV install lightdm lightdm-gtk-greeter --no-install-recommends
-sudo apt-get -yV install zsh gcc lv git nkf markdown screen
+sudo apt-get -yV install zsh gcc lv git nkf markdown screen wireshark
 sudo apt-get -yV install fcitx-mozc chromium-browser cmigemo
 sudo apt-get -yV install fonts-takao-pgothic fonts-takao-gothic fonts-taka-mincho
 sudo apt-get -yV install doxygen doxygen-gui graphviz evince
