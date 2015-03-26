@@ -90,7 +90,9 @@ sudo apt-get -yV install fcitx-mozc chromium-browser cmigemo
 sudo apt-get -yV install fonts-takao-pgothic fonts-takao-gothic fonts-taka-mincho
 sudo apt-get -yV install doxygen doxygen-gui graphviz evince
 sudo apt-get -yV install gimp inkscape dia gnome-screenshot
-sudo apt-get -yV install emacs24 emacs24-el emacs-mozc emacs-mozc-bin
+sudo apt-get -yV install emacs24 emacs24-el emacs-mozc emacs-mozc-bin maxima scilab
+sudo apt-get -yV install python-setuptool gdb
+sudo apt-get -yV install vlc
 
 ## Package compornents
 sudo apt-get -yV install software-properties-common
