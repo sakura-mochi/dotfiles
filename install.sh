@@ -86,7 +86,7 @@ sudo apt-get -y update
 sudo apt-get -yV install xserver-xorg-core xinit alsa-base gdebi-core synaptic logrotate
 sudo apt-get -yV install lightdm lightdm-gtk-greeter --no-install-recommends
 sudo apt-get -yV install zsh gcc lv git nkf markdown screen wireshark
-sudo apt-get -yV install fcitx-mozc chromium-browser cmigemo
+sudo apt-get -yV install fcitx-mozc cmigemo
 sudo apt-get -yV install fonts-takao-pgothic fonts-takao-gothic fonts-taka-mincho
 sudo apt-get -yV install doxygen doxygen-gui graphviz evince
 sudo apt-get -yV install gimp inkscape dia gnome-screenshot
@@ -117,6 +117,9 @@ sudo apt-get -yV install oracle-java8-set-default
 ## percol
 git clone http://github.com/mooz/percol.git
 cd percol
+wget http://peak.telecommunity.com/dist/ez_setup.py
+sudo python ez_setup.py
+sudo easy_install pip
 sudo python setup.py install
 
 ## Java
@@ -128,7 +131,7 @@ update-java-alternatives -l
 
 ## Flash plugin
 sudo apt-get -yV install pepperflashplugin-nonfree
-sudo update-pepperflashplugion-nonfree --install
+sudo update-pepperflashplugin-nonfree --install
 
 
 #
