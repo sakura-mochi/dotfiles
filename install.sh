@@ -62,7 +62,7 @@
 
 # Configuration
 GIT_USER="Teppei Kobayashi"
-GIT_MAIL="teppei.k.el@gmail.com"
+GIT_MAIL="teppei.solo@gmail.com"
 
 # Setup
 USER_NAME=`whoami`
@@ -77,22 +77,17 @@ cd /tmp
 # Install compornents
 #
 
-## Script log configuration
-exec 1> >(tee -a install.log)
-exec 2> >(tee -a install-errors.log >&2)
-
 ## System compornents (from official repository)
 sudo apt-get -y update
 sudo apt-get -yV install xserver-xorg-core xinit alsa-base gdebi-core synaptic logrotate
 sudo apt-get -yV install lightdm lightdm-gtk-greeter --no-install-recommends
-sudo apt-get -yV install zsh gcc lv git nkf markdown screen wireshark
-sudo apt-get -yV install fcitx-mozc cmigemo
+sudo apt-get -yV install zsh gcc g++ gdb lv git nkf markdown screen wireshark
+sudo apt-get -yV install cmigemo
 sudo apt-get -yV install fonts-takao-pgothic fonts-takao-gothic fonts-taka-mincho
 sudo apt-get -yV install doxygen doxygen-gui graphviz evince
 sudo apt-get -yV install gimp inkscape dia gnome-screenshot
 sudo apt-get -yV install emacs24 emacs24-el emacs-mozc emacs-mozc-bin maxima scilab
 sudo apt-get -yV install python-setuptool gdb
-sudo apt-get -yV install vlc
 
 ## Package compornents
 sudo apt-get -yV install software-properties-common
